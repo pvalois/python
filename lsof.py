@@ -18,9 +18,9 @@ process=[]
 
 for opt, arg in opts:
   if opt == "-n":
-    process={x for x in list(arg.split(","))}
+    process=arg.split(",")
   if opt == "-p":
-    pids={x for x in list(arg.split(","))}
+    pids=arg.split(",")
 
 # Iterate over all running process
 for proc in psutil.process_iter():
