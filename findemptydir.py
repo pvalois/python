@@ -22,8 +22,7 @@ def scan_dir(base):
 
   for p in dirs:
     if (p == "." or p == ".."): continue
-    if (p[0]=="."): continue 
-
+      
     count+=scan_dir(base+"/"+p)
 
   if (count == 0): print ("\""+purify_path(base)+"\"")
